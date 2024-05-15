@@ -1,6 +1,6 @@
 {
   "name": "simplifyqa-cli",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A CLI Tool for SimplifyQA Client",
   "scripts": {
     "sqa execute": "node dist/src/index.js execute",
