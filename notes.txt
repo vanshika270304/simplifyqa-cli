@@ -1,0 +1,10 @@
+it is node project
+npx tsc --init: created ysconfig.json
+tsc:compiles ts into js
+npm i @types/node -D:
+
+
+url
+execution token :string 88char
+verbose :boolean
+threshold: floating point number (0-100)

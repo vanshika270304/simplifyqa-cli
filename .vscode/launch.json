@@ -1,0 +1,54 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "sqa login",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}\\dist\\src\\index.js",
+      "args": [
+        "login",
+        "--app-url",
+        "https://simplifyqa.app",
+        "--username",
+        "bernard.b@simplify3x.com",
+        "--password",
+        "?fwJ7S[8[",
+        "--company",
+        "Simplify3x",
+        "--type",
+        "web"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "sqa execute",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}\\dist\\src\\index.js",
+      "args": [
+        "execute",
+        "U2FsdGVkX1++31wcRW5rowrcGDamvYfgXwOrzlfo1ygaTjWq0PDoIDFnLd7Xlo3f26v/GYchdxSFitX1HR1WZA==",
+        "--app-url",
+        "https://qa.simplifyqa.app",
+        "--threshold",
+        "50.00",
+        "--verbose",
+        "true"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "simplifyqa-cli",
+  "version": "1.0.1",
+  "description": "A CLI Tool for SimplifyQA Client",
+  "scripts": {
+    "sqa execute": "node dist/src/index.js execute",
+    "build": "concurrently \"rimraf dist\" \"npx tspc\" \"npm link\" \"npm i -g\"",
+    "prestart": "npm run build",
+    "start": "node dist/src/index.js"
+  },
+  "bin": {
+    "sqa": "./dist/src/index.js"
+  },
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "repository": {
+    "url": "https://github.com/bernardbdas/simplifyqa-cli"
+  },
+  "authors": [
+    "Simplify3x",
+    "bernardbdas",
+    "vanshika270304"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/figlet": "^1.5.8",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.12.11",
+    "@types/yargs": "^17.0.32",
+    "tsconfig-paths": "^4.2.0",
+    "typescript-transform-paths": "^3.4.7"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "chalk": "^5.3.0",
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "figlet": "^1.7.0",
+    "inquirer": "^9.2.20",
+    "rimraf": "^5.0.7",
+    "ts-patch": "^3.1.2",
+    "winston": "^3.13.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "yargs": "^17.7.2"
+  },
+  "keywords": ["simplifyqa", "Simplify3x", "Automation Testing", "Software Testing"]
+}

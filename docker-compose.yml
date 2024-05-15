@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  cli:
+    image: node:lts-slim
+    command: ["node", "./dist/src/index.js","--help"]
+    volumes:
+      - .src/:/app
+    working_dir: /app
+    ports:
+      - "3000:3000"
+
+  node_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Mount the current directory into the container to allow changes to be reflected without rebuilding the image
+    volumes:
+      - .:/usr/src/app
+    # Set environment variables if needed
+    environment:
+      - NODE_ENV=production
+    # Optionally, expose ports if your CLI app requires it
+    # ports:
+    #   - "3000:3000"
+    #   - "8080:8080"
